@@ -25,10 +25,9 @@ cacheSolve <- function(x, ...) {
   p <- x$getInverse()
   if (!is.null(p)){
     message("getting cached data")
-    return(p)
-  }
+    return(p) }
   mat <- x$get()
   p <- solve(val, ...)
   x$setInverse(p)
   p # return the inverse
-}
+  }
